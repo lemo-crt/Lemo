@@ -1,133 +1,73 @@
+
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LemonStars - Investimentos Inteligentes</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<meta charset="UTF-8">
+<title>LemonStars</title>
+<link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <nav class="navbar">
-            <div class="nav-container">
-                <div class="nav-logo">
-                    <i class="fas fa-star"></i>
-                    <span>LemonStars</span>
-                </div>
-                <ul class="nav-menu">
-                    <li><a href="#home" class="nav-link">Início</a></li>
-                    <li><a href="#services" class="nav-link">Serviços</a></li>
-                    <li><a href="#portfolio" class="nav-link">Portfólio</a></li>
-                    <li><a href="#about" class="nav-link">Sobre</a></li>
-                    <li><a href="#contact" class="nav-link">Contato</a></li>
-                    <li><a href="login.html" class="nav-link login-btn">Login</a></li>
-                </ul>
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
-        </nav>
-    </header>
+<header>
+<h1>🍋 LemonStars</h1>
+<div id="user-info">
+Nome: <span id="user-name">Usuário</span> |
+Saldo: <span id="user-balance">1000</span> MZN |
+<a href="#" onclick="showMenu()">Menu ☰</a>
+</div>
+</header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <h1 class="hero-title">Investimentos que <span class="highlight">Brilham</span></h1>
-                <p class="hero-subtitle">Maximize seus rendimentos com estratégias inteligentes e assessoria especializada. Seu futuro financeiro começa aqui.</p>
-                <div class="hero-buttons">
-                    <button class="btn btn-primary" onclick="scrollToSection('contact')">Começar Agora</button>
-                    <button class="btn btn-secondary" onclick="scrollToSection('services')">Nossos Serviços</button>
-                </div>
-            </div>
-            <div class="hero-stats">
-                <div class="stat-item">
-                    <h3 class="stat-number" data-target="15000">0</h3>
-                    <p class="stat-label">Clientes Ativos</p>
-                </div>
-                <div class="stat-item">
-                    <h3 class="stat-number" data-target="2.5">0</h3>
-                    <p class="stat-label">Bilhões Gerenciados</p>
-                </div>
-                <div class="stat-item">
-                    <h3 class="stat-number" data-target="98">0</h3>
-                    <p class="stat-label">% Satisfação</p>
-                </div>
-            </div>
-        </div>
-    </section>
+<nav id="menu" style="display:none;">
+<ul>
+<li><a href="#">Perfil</a></li>
+<li><a href="#">Formas de Depósito</a></li>
+<li><a href="#">Formas de Levantamento</a></li>
+<li><a href="#">Atendimento ao Cliente</a></li>
+<li><a href="#">Fala Conosco</a></li>
+</ul>
+</nav>
 
-    <!-- Services Section -->
-    <section id="services" class="services">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Nossos Serviços</h2>
-                <p class="section-subtitle">Soluções completas para todos os perfis de investidor</p>
-            </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h3>Consultoria Personalizada</h3>
-                    <p>Análise completa do seu perfil e objetivos para criar estratégias sob medida.</p>
-                    <ul class="service-features">
-                        <li>Análise de perfil de risco</li>
-                        <li>Planejamento financeiro</li>
-                        <li>Acompanhamento mensal</li>
-                    </ul>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-coins"></i>
-                    </div>
-                    <h3>Gestão de Portfólio</h3>
-                    <p>Gestão ativa dos seus investimentos com foco em rentabilidade e segurança.</p>
-                    <ul class="service-features">
-                        <li>Diversificação inteligente</li>
-                        <li>Rebalanceamento automático</li>
-                        <li>Relatórios detalhados</li>
-                    </ul>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <h3>Educação Financeira</h3>
-                    <p>Cursos e workshops para desenvolver sua inteligência financeira.</p>
-                    <ul class="service-features">
-                        <li>Webinars semanais</li>
-                        <li>Material educativo</li>
-                        <li>Comunidade exclusiva</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+<main>
+<h2>Produtos Digitais de Limão</h2>
+<div class="products">
 
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Performance dos Investimentos</h2>
-                <p class="section-subtitle">Resultados consistentes ao longo dos anos</p>
-            </div>
-            <div class="portfolio-content">
-                <div class="portfolio-chart">
-                    <canvas id="performanceChart"></canvas>
-                </div>
-                <div class="portfolio-metrics">
-                    <div class="metric-card">
-                        <h4>Rentabilidade Anual</h4>
-                        <span class="metric-value positive">+18.5%</span>
-                        <p>Média dos últimos 5 anos</p>
-                    </div>
-                    <div class="metric-card">
-                        <h4>Volatilidade</h4>
-                        <span class="metric-value">12.3%</span>
-                        <p>R
+<div class="product">
+<img src="images/product_1.png" alt="Bolacha de Limão">
+<div class="product-name">Bolacha de Limão</div>
+<div class="price">120 MZN</div>
+<button onclick="buyProduct(120, 'Bolacha de Limão')">Investir</button>
+</div>
+
+<div class="product">
+<img src="images/product_2.png" alt="Suco de Limão">
+<div class="product-name">Suco de Limão</div>
+<div class="price">250 MZN</div>
+<button onclick="buyProduct(250, 'Suco de Limão')">Investir</button>
+</div>
+
+<div class="product">
+<img src="images/product_3.png" alt="Limão">
+<div class="product-name">Limão</div>
+<div class="price">300 MZN</div>
+<button onclick="buyProduct(300, 'Limão')">Investir</button>
+</div>
+
+<div class="product">
+<img src="images/product_4.png" alt="Limonada">
+<div class="product-name">Limonada</div>
+<div class="price">500 MZN</div>
+<button onclick="buyProduct(500, 'Limonada')">Investir</button>
+</div>
+
+<div class="product">
+<img src="images/product_5.png" alt="Mistura de Limão">
+<div class="product-name">Mistura de Limão</div>
+<div class="price">1060 MZN</div>
+<button onclick="buyProduct(1060, 'Mistura de Limão')">Investir</button>
+</div>
+
+</div>
+</main>
+
+<script src="js/script.js"></script>
+</body>
+</html>
